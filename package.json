@@ -1,0 +1,46 @@
+{
+  "name": "formate-cli",
+  "version": "0.0.1",
+  "description": "formate  code cli",
+  "main": "dist/index.js",
+  "bin": {
+    "formate-cli": "bin/formate-cli"
+  },
+  "scripts": {
+    "dev": "nodemon ./index.ts",
+    "serve": "ts-node ./index.ts",
+    "tsc": "tsc",
+    "commit": "git add . && git-cz ",
+    "update-version": "ts-node build/version.ts",
+    "commit-version": "npm run update-version && git add . && git-cz",
+    "release": "rm -rf dist && tsc && ts-node build/index.ts",
+    "build": "tsc && vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pengQing21/formate-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pengQing21/formate-cli/issues"
+  },
+  "homepage": "https://github.com/pengQing21/formate-cli#readme",
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.2",
+    "husky": "^8.0.0",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.2"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^9.0.2",
+    "cac": "^6.7.14",
+    "cross-spawn": "^7.0.3",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.4"
+  }
+}
