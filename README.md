@@ -11,7 +11,12 @@ formate  code cli
 # 1. 项目中执行
 npm i formate-cli -D
 
-# 2. 执行npm run formate-cli, 即会自动添加依赖
+# 2. 在package.json中添加script
+"scripts": {
+  "xianzao-cli": "xianzao-cli",
+},
+
+# 3. 执行npm run formate-cli, 即会自动添加依赖
 
 # 3. npm i / yarn install
 ```
